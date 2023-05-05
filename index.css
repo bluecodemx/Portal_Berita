@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.lorem-article h1 {
+  color: brown;
+  text-align: center;
+}
+.lorem-article article {
+  text-align: center;
+  font-size: 18px;
+}
+.footer footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 10px;
+}
