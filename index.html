@@ -1,24 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berita Lorem Ipsum</title>
+    <title>Portal Berita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="lorem-article">
-      <h1>Kabar Lorem Ipsum Hari Kamis</h1>
-      <article>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-        specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-        passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </article>
-    </div>
-    <div class="footer">
-      <footer>Lorem Ipsum Company.All Right Reserved</footer>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <span class="brand-mark">P</span>
+          <div>
+            <p class="brand-name">PortalBerita</p>
+            <span class="brand-tag">Update terkini</span>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Navigasi utama">
+          <a href="#">Nasional</a>
+          <a href="#">Olahraga</a>
+          <a href="#">Ekonomi</a>
+          <a href="#">Teknologi</a>
+        </nav>
+
+        <button class="nav-button">Langganan</button>
+      </header>
+
+      <main class="news-layout">
+        <section class="hero-card">
+          <div class="hero-copy">
+            <span class="eyebrow">Breaking News</span>
+            <h1>Kabar Lorem Ipsum Hari Kamis</h1>
+            <p class="subtitle">Berita singkat dan inspiratif untuk Anda yang ingin tahu lebih banyak tentang tren, opini, dan informasi terbaru.</p>
+
+            <div class="meta-row">
+              <span>10 Oktober 2026</span>
+              <span>•</span>
+              <span>Reporter: Tim Redaksi</span>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="visual-badge">Live</div>
+            <div class="visual-panel">
+              <div class="mini-card accent"></div>
+              <div class="mini-card"></div>
+              <div class="mini-card light"></div>
+            </div>
+          </div>
+        </section>
+
+        <article class="article-card">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+          <p>
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p>Lorem Ipsum Company. All Right Reserved</p>
+      </footer>
     </div>
   </body>
-  <!--Css Link-->
-  <link rel="stylesheet" href="index.css" />
 </html>
