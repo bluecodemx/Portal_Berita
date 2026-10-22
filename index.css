@@ -243,6 +243,99 @@ a {
   margin-bottom: 0;
 }
 
+.focus-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px 20px;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+}
+
+.metric-card strong {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: white;
+  line-height: 1;
+}
+
+.metric-card small,
+.metric-label {
+  color: var(--muted);
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.accent-card {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(15, 23, 42, 0.8));
+}
+
+.soft-card {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.16), rgba(15, 23, 42, 0.8));
+}
+
+.agenda-panel {
+  display: grid;
+  gap: 16px;
+  padding: 24px 28px;
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+}
+
+.agenda-copy h2 {
+  margin: 0;
+  color: white;
+  font-size: clamp(1.6rem, 2vw, 2.5rem);
+}
+
+.agenda-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.agenda-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  color: #dbeafe;
+}
+
+.agenda-list li::before {
+  content: "•";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(96, 165, 250, 0.16);
+  color: #93c5fd;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 .trending-panel,
 .newsletter-card {
   padding: 28px;
@@ -438,6 +531,11 @@ a {
 
   .news-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .focus-row,
+  .agenda-list {
+    grid-template-columns: 1fr;
   }
 
   .newsletter-card,

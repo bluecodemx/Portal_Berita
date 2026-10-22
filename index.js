@@ -49,12 +49,31 @@ const stories = [
   },
 ];
 
+const agenda = [
+  'Pemilu regional menajamkan fokus pada isu layanan publik',
+  'Sektor digital terus melaporkan pertumbuhan investasi baru',
+  'Pemerintah mempercepat agenda transisi energi terbarukan',
+  'Komunitas olahraga menyiapkan delegasi multievent nasional',
+  'Kota besar memperluas program ruang hijau perkotaan',
+  'Pelaku usaha dorong kolaborasi antarwilayah untuk ekspansi',
+];
+
 const newsGrid = document.getElementById('newsGrid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 const yearNode = document.getElementById('year');
 const newsletterForm = document.getElementById('newsletterForm');
+const agendaList = document.getElementById('agendaList');
 
 let visibleCount = 3;
+
+function renderAgenda() {
+  if (!agendaList) return;
+
+  agendaList.innerHTML = agenda
+    .slice(0, 6)
+    .map((item) => `<li>${item}</li>`)
+    .join('');
+}
 
 function renderStories() {
   if (!newsGrid) return;
@@ -115,4 +134,5 @@ if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
 }
 
+renderAgenda();
 renderStories();
