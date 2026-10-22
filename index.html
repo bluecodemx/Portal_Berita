@@ -77,11 +77,39 @@
             Ipsum.
           </p>
         </article>
+
+        <section class="trending-panel">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow eyebrow-light">Berita Terkini</span>
+              <h2>Update paling dibaca</h2>
+            </div>
+            <button class="ghost-button" id="loadMoreBtn" type="button">
+              Tampilkan lebih banyak
+            </button>
+          </div>
+
+          <div class="news-grid" id="newsGrid" aria-live="polite"></div>
+        </section>
+
+        <section class="newsletter-card">
+          <div>
+            <span class="eyebrow eyebrow-light">Newsletter</span>
+            <h2>Dapatkan update tanpa ketinggalan</h2>
+          </div>
+
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Masukkan email Anda" aria-label="Email" required />
+            <button type="submit">Berlangganan</button>
+          </form>
+        </section>
       </main>
 
       <footer class="site-footer">
-        <p>Lorem Ipsum Company. All Right Reserved</p>
+        <p>© <span id="year"></span> PortalBerita. All Right Reserved</p>
       </footer>
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
