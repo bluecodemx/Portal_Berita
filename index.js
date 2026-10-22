@@ -49,12 +49,47 @@ const stories = [
   },
 ];
 
+const editorPicks = [
+  {
+    tag: 'Analisis',
+    title: 'Tiga strategi yang bisa mempercepat transformasi pelayanan publik',
+    meta: '4 menit dibaca',
+  },
+  {
+    tag: 'Makro',
+    title: 'Ekonomi daerah mulai terlihat lebih siap menghadapi perubahan',
+    meta: '6 menit dibaca',
+  },
+  {
+    tag: 'Wawancara',
+    title: 'Pelaku UMKM berbicara soal tantangan dan peluang di 2027',
+    meta: '8 menit dibaca',
+  },
+];
+
 const newsGrid = document.getElementById('newsGrid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 const yearNode = document.getElementById('year');
 const newsletterForm = document.getElementById('newsletterForm');
+const editorPickList = document.getElementById('editorPickList');
 
 let visibleCount = 3;
+
+function renderEditorPicks() {
+  if (!editorPickList) return;
+
+  editorPickList.innerHTML = editorPicks
+    .map(
+      (item) => `
+        <article class="pick-item">
+          <span>${item.tag}</span>
+          <strong>${item.title}</strong>
+          <small>${item.meta}</small>
+        </article>
+      `,
+    )
+    .join('');
+}
 
 function renderStories() {
   if (!newsGrid) return;
@@ -115,4 +150,5 @@ if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
 }
 
+renderEditorPicks();
 renderStories();
